@@ -5,3 +5,7 @@ branches:
     - master
 xcode_project: ReadyForCoffee.xcodeproj
 xcode_scheme: ReadyForCoffeeTravis
+before_install:
+	- brew update
+	- brew install carthage
+	- carthage build
