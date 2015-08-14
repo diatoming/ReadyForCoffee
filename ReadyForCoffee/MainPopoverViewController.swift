@@ -11,8 +11,12 @@ import Bond
 
 class MainPopoverViewController : NSViewController {
 
+    //MARK: - Private Properties
+    
     private let viewModel : MainPopoverViewModel    = MainPopoverViewModel()
     private var popoverView : MainPopoverView?
+    
+    //MARK: - Init
     
     init?(frame: NSRect) {
         super.init(nibName: nil, bundle: nil)
@@ -21,6 +25,8 @@ class MainPopoverViewController : NSViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Public Methods
     
     override func loadView() {
         
@@ -39,7 +45,9 @@ class MainPopoverViewController : NSViewController {
         self.setupDataBinding()
     }
     
-    func setupDataBinding() {
+     //MARK: - Private Methods
+    
+    private func setupDataBinding() {
         
         var popoverView = self.view as! MainPopoverView
         self.viewModel.status ->> popoverView.subTitleView.dynText

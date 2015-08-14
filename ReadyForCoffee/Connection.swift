@@ -10,10 +10,14 @@ import Foundation
 
 class Connection {
     
+    //MARK: - Public Properties
+    
     var isActive : Bool?
     var isReadyForCoffee : Bool?
     var totalCoffees : Int?
     var readyCoffees : Int?
+    
+    //MARK: - Init
     
     required init?() {
         isActive = false

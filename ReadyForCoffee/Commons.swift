@@ -11,6 +11,17 @@ import Cocoa
 
 struct Commons {
     
+    struct Settings {
+        
+        static var serviceNamePrefix : String {
+            get {
+                var version : AnyObject? = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"]
+                return "ReadyForCoffe-" + (version as! String) + "-"
+            }
+        }
+        
+    }
+    
     struct Colors {
         
         static let primaryColor : NSColor = NSColor(deviceRed: 153/255, green: 98/255, blue: 42/255, alpha: 1)

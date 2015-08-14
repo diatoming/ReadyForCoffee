@@ -12,6 +12,8 @@ import SnapKit
 
 class MainPopoverView : NSView {
     
+     //MARK: - Public Properties
+    
     var coffeeCupView : CoffeeCupView = CoffeeCupView()
     var titleView : VerticalCenteredTextField = VerticalCenteredTextField()
     var yesView : NSTextField = NSTextField()
@@ -21,6 +23,8 @@ class MainPopoverView : NSView {
     var informationButton : NSButton = NSButton()
     
     var informationMenu : NSMenu = NSMenu(title: "Test")
+    
+    //MARK: - Init
     
     override init(frame: NSRect) {
         super.init(frame: frame)
@@ -152,15 +156,13 @@ class MainPopoverView : NSView {
         }
 
     }
-    
-    func informationClicked(sender: AnyObject) {
-        NSMenu.popUpContextMenu(informationMenu, withEvent: NSEvent(), forView: self)
-    }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Public Methods
+
     func getTintedImage(image:NSImage, tint:NSColor) -> NSImage {
         
         let tinted = image.copy() as! NSImage
@@ -173,5 +175,13 @@ class MainPopoverView : NSView {
         tinted.unlockFocus()
         return tinted
     }
+    
+    //MARK: - Private Methods
+    
+    private func informationClicked(sender: AnyObject) {
+        NSMenu.popUpContextMenu(informationMenu, withEvent: NSEvent(), forView: self)
+    }
+
+
     
 }

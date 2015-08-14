@@ -13,16 +13,19 @@ import SnapKit
 
 class CoffeeCupView : NSView {
     
-    var firstPath : CGMutablePathRef!
-    var secondPath : CGMutablePathRef!
+    //MARK: - Private Properties
+    private var firstPath : CGMutablePathRef!
+    private var secondPath : CGMutablePathRef!
     
-    var leftSteamLayer : CAShapeLayer!
-    var middleSteamLayer : CAShapeLayer!
-    var rightSteamLayer : CAShapeLayer!
-    var coffeeImage : NSImageView!
+    private var leftSteamLayer : CAShapeLayer!
+    private var middleSteamLayer : CAShapeLayer!
+    private var rightSteamLayer : CAShapeLayer!
+    private var coffeeImage : NSImageView!
     
-    var color : NSColor = Commons.Colors.primaryFontColor
-
+    private var color : NSColor = Commons.Colors.primaryFontColor
+    
+    //MARK: - Init
+    
     override init(frame: NSRect) {
         
         super.init(frame: frame)
@@ -67,6 +70,12 @@ class CoffeeCupView : NSView {
         
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Public Methods
+    
     override func layout() {
         super.layout()
         
@@ -77,7 +86,21 @@ class CoffeeCupView : NSView {
         rightSteamLayer.frame = CGRectMake(coffeeImage.frame.origin.x + coffeeImage.frame.size.width * 0.75 - frame.width * Commons.Dimensions.CoffeeCupView.steamWidthPercentage, coffeeImage.frame.height + frame.height * Commons.Dimensions.CoffeeCupView.spacePercentage, frame.width * Commons.Dimensions.CoffeeCupView.steamWidthPercentage / 2, frame.height * 0.3)
     }
     
-    func updateSteam() {
+    func GetTintedImage(image:NSImage, tint:NSColor) -> NSImage {
+        
+        let tinted = image.copy() as! NSImage
+        tinted.lockFocus()
+        tint.set()
+        
+        let imageRect = NSRect(origin: NSZeroPoint, size: image.size)
+        NSRectFillUsingOperation(imageRect, NSCompositingOperation.CompositeSourceAtop)
+        
+        tinted.unlockFocus()
+        return tinted
+    }
+    
+    //MARK: - Private Methods
+    private func updateSteam() {
         
         var xOrigin = coffeeImage.frame.width * 0.05 / 2.0
         var yOrigin = CGFloat(0)
@@ -111,23 +134,6 @@ class CoffeeCupView : NSView {
         middleSteamLayer.addAnimation(animation, forKey: "animationPath")
         rightSteamLayer.addAnimation(animation, forKey: "animationPath")
         
-    }
-    
-    func GetTintedImage(image:NSImage, tint:NSColor) -> NSImage {
-        
-        let tinted = image.copy() as! NSImage
-        tinted.lockFocus()
-        tint.set()
-        
-        let imageRect = NSRect(origin: NSZeroPoint, size: image.size)
-        NSRectFillUsingOperation(imageRect, NSCompositingOperation.CompositeSourceAtop)
-        
-        tinted.unlockFocus()
-        return tinted
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
 }

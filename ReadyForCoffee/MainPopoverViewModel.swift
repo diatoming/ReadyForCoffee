@@ -12,7 +12,11 @@ import Bond
 
 class MainPopoverViewModel: NSObject {
 
-    private let connection  = Dynamic<Connection?>(nil)
+    //MARK: - Private Properties
+    private var service : MultipeerService?     = nil
+    private let connection                      = Dynamic<Connection?>(nil)
+    
+    //MARK: - Public Properties
     
     let headline            = Dynamic<String>("Coffee?")
     let yes                 = Dynamic<String>("Yes")
@@ -20,20 +24,33 @@ class MainPopoverViewModel: NSObject {
     let status              = Dynamic<String>("")
     let coffeeImage         = Dynamic<String>("CoffeeCup")
     
+    let serviceID           = Dynamic<String>("Default")
+    
+    //MARK: - Init
+    
     override init() {
         super.init()
+        
+        //Setup MultipeerService
+        self.setupMultipeerService()
         
         //Setup DataBinding
         self.setupDataBinding()
     }
     
-    func setupDataBinding() {
+    //MARK: - Private Methods
+    
+    private func setupDataBinding() {
 
         connection.filter({ (con : Connection?) -> Bool in
             return (con != nil)
         }).map { (con : Connection?) -> String in
             return "" + con!.readyCoffees!.description + " / " + con!.totalCoffees!.description
         } ->> status
+    }
+    
+    private func setupMultipeerService() {
+        service = MultipeerService(displayName: NSFullUserName(), serviceType: Commons.Settings.serviceNamePrefix + serviceID.value)
     }
     
 }
