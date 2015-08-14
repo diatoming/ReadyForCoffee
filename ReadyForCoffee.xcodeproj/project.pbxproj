@@ -513,6 +513,7 @@
 				6D20D7491B7D0F010034B2B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D20D74A1B7D0F010034B2B0 /* Build configuration list for PBXNativeTarget "ReadyForCoffeeTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +522,7 @@
 				6D20D74C1B7D0F010034B2B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

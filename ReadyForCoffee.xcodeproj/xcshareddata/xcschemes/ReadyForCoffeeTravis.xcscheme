@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6D20D72C1B7D0F010034B2B0"
+               BuildableName = "ReadyForCoffee.app"
+               BlueprintName = "ReadyForCoffee"
+               ReferencedContainer = "container:ReadyForCoffee.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "6D20D73C1B7D0F010034B2B0"
                BuildableName = "ReadyForCoffeeTests.xctest"
                BlueprintName = "ReadyForCoffeeTests"
@@ -79,9 +93,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6D20D73C1B7D0F010034B2B0"
-            BuildableName = "ReadyForCoffeeTests.xctest"
-            BlueprintName = "ReadyForCoffeeTests"
+            BlueprintIdentifier = "6D20D72C1B7D0F010034B2B0"
+            BuildableName = "ReadyForCoffee.app"
+            BlueprintName = "ReadyForCoffee"
             ReferencedContainer = "container:ReadyForCoffee.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
