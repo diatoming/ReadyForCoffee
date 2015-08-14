@@ -130,6 +130,10 @@ class CoffeeCupView : NSView {
         animation.autoreverses = true
         animation.fromValue = firstPath
         animation.toValue = secondPath
+        
+        leftSteamLayer.removeAllAnimations()
+        middleSteamLayer.removeAllAnimations()
+        rightSteamLayer.removeAllAnimations()
         leftSteamLayer.addAnimation(animation, forKey: "animationPath")
         middleSteamLayer.addAnimation(animation, forKey: "animationPath")
         rightSteamLayer.addAnimation(animation, forKey: "animationPath")

@@ -77,8 +77,8 @@ class MainPopoverView : NSView {
         slider.tickMarkPosition = NSTickMarkPosition.Above
         sliderCell.numberOfTickMarks = 2
         sliderCell.allowsTickMarkValuesOnly = true
-        slider.maxValue = 2
-        slider.minValue = 1
+        slider.maxValue = 1
+        slider.minValue = 0
         self.addSubview(slider)
         
         //Add subTitleView

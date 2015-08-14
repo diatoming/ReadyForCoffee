@@ -41,15 +41,23 @@ class MainPopoverViewController : NSViewController {
             make.center.equalTo(self.view.snp_center)
         }
         
+        self.popoverView!.slider.action = Selector("sliderValueChanged:")
+        self.popoverView!.slider.target = self
+        
         //Setup RAC DataBinding
         self.setupDataBinding()
     }
     
+    func sliderValueChanged(sender: NSSlider) {
+        viewModel.isReadyForCoffee.value = (sender.integerValue == 1 ? CoffeeStatus.Ready : CoffeeStatus.NotReady)
+    }
+
      //MARK: - Private Methods
     
     private func setupDataBinding() {
         
         var popoverView = self.view as! MainPopoverView
+        
         self.viewModel.status ->> popoverView.subTitleView.dynText
         
         self.viewModel.headline ->> popoverView.titleView.dynText

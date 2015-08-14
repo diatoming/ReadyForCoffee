@@ -8,11 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		6D20D7941B7E30070034B2B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20D7931B7E30070034B2B0 /* AppDelegate.swift */; };
-		6D20D7961B7E30070034B2B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20D7951B7E30070034B2B0 /* ViewController.swift */; };
+		6D20D7961B7E30070034B2B0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20D7951B7E30070034B2B0 /* MainViewController.swift */; };
 		6D20D7991B7E30070034B2B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D20D7971B7E30070034B2B0 /* Main.storyboard */; };
 		6D20D79B1B7E30070034B2B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D20D79A1B7E30070034B2B0 /* Images.xcassets */; };
 		6D20D79E1B7E30070034B2B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D20D79C1B7E30070034B2B0 /* LaunchScreen.xib */; };
 		6D20D7AA1B7E30070034B2B0 /* ReadyForCoffeeTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20D7A91B7E30070034B2B0 /* ReadyForCoffeeTestAppTests.swift */; };
+		6D20D7BD1B7E34BD0034B2B0 /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D20D7BC1B7E34BD0034B2B0 /* MultipeerConnectivity.framework */; };
+		6D20D7C11B7E35010034B2B0 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20D7C01B7E35010034B2B0 /* Commons.swift */; };
+		6D20D7C41B7E35520034B2B0 /* MultipeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20D7C31B7E35520034B2B0 /* MultipeerService.swift */; };
+		6D20D7C81B7E358D0034B2B0 /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D20D7C71B7E358D0034B2B0 /* Bond.framework */; };
+		6D20D7CA1B7E35940034B2B0 /* Bond.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D20D7C71B7E358D0034B2B0 /* Bond.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6D20D7CE1B7E35CC0034B2B0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20D7CD1B7E35CC0034B2B0 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,17 +31,36 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6D20D7CB1B7E35940034B2B0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6D20D7CA1B7E35940034B2B0 /* Bond.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		6D20D78E1B7E30070034B2B0 /* ReadyForCoffeeTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadyForCoffeeTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D20D7921B7E30070034B2B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D20D7931B7E30070034B2B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6D20D7951B7E30070034B2B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6D20D7951B7E30070034B2B0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6D20D7981B7E30070034B2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D20D79A1B7E30070034B2B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6D20D79D1B7E30070034B2B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6D20D7A31B7E30070034B2B0 /* ReadyForCoffeeTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReadyForCoffeeTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D20D7A81B7E30070034B2B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D20D7A91B7E30070034B2B0 /* ReadyForCoffeeTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyForCoffeeTestAppTests.swift; sourceTree = "<group>"; };
+		6D20D7BC1B7E34BD0034B2B0 /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		6D20D7C01B7E35010034B2B0 /* Commons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
+		6D20D7C31B7E35520034B2B0 /* MultipeerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultipeerService.swift; path = ReadyForCoffee/MultipeerService.swift; sourceTree = "<group>"; };
+		6D20D7C71B7E358D0034B2B0 /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = Carthage/Build/iOS/Bond.framework; sourceTree = "<group>"; };
+		6D20D7CD1B7E35CC0034B2B0 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D20D7BD1B7E34BD0034B2B0 /* MultipeerConnectivity.framework in Frameworks */,
+				6D20D7C81B7E358D0034B2B0 /* Bond.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +89,7 @@
 				6D20D7901B7E30070034B2B0 /* ReadyForCoffeeTestApp */,
 				6D20D7A61B7E30070034B2B0 /* ReadyForCoffeeTestAppTests */,
 				6D20D78F1B7E30070034B2B0 /* Products */,
+				6D20D7BE1B7E34C10034B2B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +105,12 @@
 		6D20D7901B7E30070034B2B0 /* ReadyForCoffeeTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				6D20D7D41B7E3B6A0034B2B0 /* Shared */,
+				6D20D7CC1B7E35B50034B2B0 /* ViewModels */,
+				6D20D7BF1B7E34DB0034B2B0 /* Views */,
 				6D20D7931B7E30070034B2B0 /* AppDelegate.swift */,
-				6D20D7951B7E30070034B2B0 /* ViewController.swift */,
 				6D20D7971B7E30070034B2B0 /* Main.storyboard */,
+				6D20D7C01B7E35010034B2B0 /* Commons.swift */,
 				6D20D79A1B7E30070034B2B0 /* Images.xcassets */,
 				6D20D79C1B7E30070034B2B0 /* LaunchScreen.xib */,
 				6D20D7911B7E30070034B2B0 /* Supporting Files */,
@@ -112,6 +143,48 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6D20D7BE1B7E34C10034B2B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D20D7C71B7E358D0034B2B0 /* Bond.framework */,
+				6D20D7BC1B7E34BD0034B2B0 /* MultipeerConnectivity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D20D7BF1B7E34DB0034B2B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6D20D7951B7E30070034B2B0 /* MainViewController.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6D20D7C21B7E35420034B2B0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6D20D7C31B7E35520034B2B0 /* MultipeerService.swift */,
+			);
+			name = Services;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		6D20D7CC1B7E35B50034B2B0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6D20D7CD1B7E35CC0034B2B0 /* MainViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		6D20D7D41B7E3B6A0034B2B0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				6D20D7C21B7E35420034B2B0 /* Services */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,6 +195,7 @@
 				6D20D78A1B7E30070034B2B0 /* Sources */,
 				6D20D78B1B7E30070034B2B0 /* Frameworks */,
 				6D20D78C1B7E30070034B2B0 /* Resources */,
+				6D20D7CB1B7E35940034B2B0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,7 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D20D7961B7E30070034B2B0 /* ViewController.swift in Sources */,
+				6D20D7CE1B7E35CC0034B2B0 /* MainViewModel.swift in Sources */,
+				6D20D7961B7E30070034B2B0 /* MainViewController.swift in Sources */,
+				6D20D7C41B7E35520034B2B0 /* MultipeerService.swift in Sources */,
+				6D20D7C11B7E35010034B2B0 /* Commons.swift in Sources */,
 				6D20D7941B7E30070034B2B0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,9 +417,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReadyForCoffeeTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -350,9 +432,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ReadyForCoffeeTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
