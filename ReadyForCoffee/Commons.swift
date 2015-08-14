@@ -16,7 +16,8 @@ struct Commons {
         static var serviceNamePrefix : String {
             get {
                 var version : AnyObject? = NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"]
-                return "ReadyForCoffe-" + (version as! String) + "-"
+                var versionString = (version as! String).stringByReplacingOccurrencesOfString(".", withString: "-", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                return "RFC-" + versionString + "-"
             }
         }
         
