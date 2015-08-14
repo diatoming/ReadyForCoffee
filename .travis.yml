@@ -4,4 +4,4 @@ branches:
   only:
     - master
 xcode_project: ReadyForCoffee.xcodeproj
-xcode_scheme: ReadyForCoffee
+xcode_scheme: ReadyForCoffee UnitTests
