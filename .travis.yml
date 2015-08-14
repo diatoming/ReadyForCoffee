@@ -3,3 +3,5 @@ osx_image: xcode6.4
 branches:
   only:
     - master
+xcode_project: ReadyForCoffee.xcodeproj
+xcode_scheme: ReadyForCoffee
