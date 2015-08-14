@@ -1,1 +1,2 @@
+github "ReactiveCocoa/ReactiveCocoa" "v2.5"
 github "SnapKit/SnapKit" "0.13.0"

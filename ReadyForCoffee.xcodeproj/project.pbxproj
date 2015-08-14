@@ -20,6 +20,7 @@
 		6D20D75E1B7D1DCA0034B2B0 /* CoffeeCupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20D75D1B7D1DCA0034B2B0 /* CoffeeCupView.swift */; };
 		6D20D7611B7D30EE0034B2B0 /* Channel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D20D7601B7D30EE0034B2B0 /* Channel.ttf */; };
 		6D20D7661B7D46FB0034B2B0 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D20D7651B7D46FB0034B2B0 /* TextField.swift */; };
+		6D20D7691B7E0AE00034B2B0 /* cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 6D20D7681B7E0AE00034B2B0 /* cartfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		6D20D75D1B7D1DCA0034B2B0 /* CoffeeCupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeCupView.swift; sourceTree = "<group>"; };
 		6D20D7601B7D30EE0034B2B0 /* Channel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Channel.ttf; sourceTree = "<group>"; };
 		6D20D7651B7D46FB0034B2B0 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		6D20D7681B7E0AE00034B2B0 /* cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cartfile; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				6D20D72F1B7D0F010034B2B0 /* ReadyForCoffee */,
+				6D20D7681B7E0AE00034B2B0 /* cartfile */,
 				6D20D7401B7D0F010034B2B0 /* ReadyForCoffeeTests */,
 				6D20D72E1B7D0F010034B2B0 /* Products */,
 				6D20D74D1B7D139E0034B2B0 /* Frameworks */,
@@ -106,6 +109,7 @@
 		6D20D72F1B7D0F010034B2B0 /* ReadyForCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				6D20D7671B7E0AC80034B2B0 /* Models */,
 				6D20D75A1B7D1B520034B2B0 /* ViewModel */,
 				6D20D7551B7D15510034B2B0 /* Views */,
 				6D20D7321B7D0F010034B2B0 /* AppDelegate.swift */,
@@ -202,6 +206,13 @@
 			name = Generic;
 			sourceTree = "<group>";
 		};
+		6D20D7671B7E0AC80034B2B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,6 +297,7 @@
 			files = (
 				6D20D7351B7D0F010034B2B0 /* Images.xcassets in Resources */,
 				6D20D7381B7D0F010034B2B0 /* MainMenu.xib in Resources */,
+				6D20D7691B7E0AE00034B2B0 /* cartfile in Resources */,
 				6D20D7611B7D30EE0034B2B0 /* Channel.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
