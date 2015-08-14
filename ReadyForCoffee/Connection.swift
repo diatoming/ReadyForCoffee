@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+class Connection {
+    
+    var isActive : Bool?
+    var isReadyForCoffee : Bool?
+    var totalCoffees : Int?
+    var readyCoffees : Int?
+    
+    required init?() {
+        isActive = false
+        isReadyForCoffee = false
+        totalCoffees = 0
+        readyCoffees = 0
+    }
+    
+}

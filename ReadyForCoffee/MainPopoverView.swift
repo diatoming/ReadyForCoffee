@@ -39,7 +39,6 @@ class MainPopoverView : NSView {
         
         //Add TitleView
         titleView.font = NSFont(name: Commons.Dimensions.MainPopoverView.titleFontName, size: Commons.Dimensions.MainPopoverView.titleFontSize)
-        titleView.stringValue = "Coffee?"
         titleView.editable = false
         titleView.textColor = Commons.Colors.primaryFontColor
         titleView.backgroundColor = NSColor.clearColor()
@@ -50,7 +49,6 @@ class MainPopoverView : NSView {
         
         //Add yesView
         yesView.font = NSFont(name: Commons.Dimensions.MainPopoverView.optionsFontName, size: Commons.Dimensions.MainPopoverView.optionsFontSize)
-        yesView.stringValue = "Yes"
         yesView.editable = false
         yesView.textColor = Commons.Colors.primaryFontColor
         yesView.backgroundColor = NSColor.clearColor()
@@ -61,7 +59,6 @@ class MainPopoverView : NSView {
         
         //Add noView
         noView.font = NSFont(name: Commons.Dimensions.MainPopoverView.optionsFontName, size: Commons.Dimensions.MainPopoverView.optionsFontSize)
-        noView.stringValue = "No"
         noView.editable = false
         noView.textColor = Commons.Colors.primaryFontColor
         noView.backgroundColor = NSColor.clearColor()
@@ -74,16 +71,14 @@ class MainPopoverView : NSView {
         var sliderCell = slider.cell() as! NSSliderCell
         slider.sliderType = NSSliderType.LinearSlider
         slider.tickMarkPosition = NSTickMarkPosition.Above
-        sliderCell.numberOfTickMarks = 3
+        sliderCell.numberOfTickMarks = 2
         sliderCell.allowsTickMarkValuesOnly = true
-        slider.maxValue = 3
+        slider.maxValue = 2
         slider.minValue = 1
-        slider.stringValue = "2"
         self.addSubview(slider)
         
         //Add subTitleView
         subTitleView.font = NSFont(name: Commons.Dimensions.MainPopoverView.subTitleFontName, size: Commons.Dimensions.MainPopoverView.subTitleFontSize)
-        subTitleView.stringValue = "5 / 10"
         subTitleView.editable = false
         subTitleView.textColor = Commons.Colors.primaryFontColor
         subTitleView.backgroundColor = NSColor.clearColor()
@@ -95,7 +90,7 @@ class MainPopoverView : NSView {
         
         //Information Button
         var buttonCell = informationButton.cell() as! NSButtonCell
-        buttonCell.image = GetTintedImage(NSImage(named: "Information")!, tint: Commons.Colors.primaryFontColor)
+        buttonCell.image = getTintedImage(NSImage(named: "Information")!, tint: Commons.Colors.primaryFontColor)
         buttonCell.imageScaling = NSImageScaling.ImageScaleProportionallyUpOrDown
         buttonCell.action = Selector("informationClicked:")
         buttonCell.target = self
@@ -166,7 +161,7 @@ class MainPopoverView : NSView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func GetTintedImage(image:NSImage, tint:NSColor) -> NSImage {
+    func getTintedImage(image:NSImage, tint:NSColor) -> NSImage {
         
         let tinted = image.copy() as! NSImage
         tinted.lockFocus()
